@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { Container, Header, HeaderTitle, Avatar } from './styles';
+
+import FilmList from '~/components/FilmList';
+
+import { Container, Header, HeaderTitle, Avatar, Category } from './styles';
 
 export default function Films() {
   return (
@@ -8,12 +11,24 @@ export default function Films() {
       <Header>
         <HeaderTitle>
           Escolha um {'\n'}título
-      </HeaderTitle>
+        </HeaderTitle>
 
         <Avatar
           source={{ uri: 'https://api.adorable.io/avatars/50/abott@adorable.png' }}
         />
       </Header>
+
+      <Category>
+        Drama
+      </Category>
+
+      <FilmList />
+
+      <Category>
+        Suspense
+      </Category>
+
+      <FilmList />
 
     </Container>
   )
