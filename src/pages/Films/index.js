@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import FilmList from '~/components/FilmList';
 
 import { Container, Header, HeaderTitle, Avatar, Title, FilmsCategory } from './styles';

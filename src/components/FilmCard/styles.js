@@ -7,6 +7,6 @@ export const Film = styled.Image`
   margin-right: 27px;
 `;
 
-export const Title = styled.Text`
+export const Link = styled.TouchableOpacity`
 
 `;

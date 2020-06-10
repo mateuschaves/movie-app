@@ -5,8 +5,8 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import AuthNavigator from './AuthNavigator';
+import RootNavigator from './FilmNavigator';
 
-import Films from '../pages/Films';
 import Liked from '../pages/Liked';
 
 export function RootAuthenticated() {
@@ -18,11 +18,10 @@ export function RootAuthenticated() {
       barStyle={{
         backgroundColor: '#343434'
       }}
-
     >
       <Tab.Screen
         name="Films"
-        component={Films}
+        component={RootNavigator}
         options={{
           tabBarLabel: 'Filmes',
           tabBarIcon: ({ color }) => (
