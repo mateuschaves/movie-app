@@ -22,7 +22,7 @@ export default function HeaderButtons() {
       />
       <MaterialCommunityIcons
         name={liked ? 'heart' : 'heart-outline'}
-        color={liked ? 'red' : 'white'}
+        color={liked ? '#8D0000' : '#FFFFFFFF'}
         size={30}
         onPress={() => {
           setLiked(!liked);
