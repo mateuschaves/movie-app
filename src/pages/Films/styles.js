@@ -4,6 +4,7 @@ export const Container = styled.View`
   background-color: #343434;
   flex: 1;
   padding: 50px;
+  padding-bottom: 0px;
 `;
 
 export const Header = styled.View`
@@ -17,7 +18,7 @@ export const HeaderTitle = styled.Text`
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-`
+`;
 
 export const Avatar = styled.Image`
   border-radius: 90px;
