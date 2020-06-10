@@ -1,4 +1,6 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 
 import '~/config/ReactotronConfig';
@@ -11,6 +13,9 @@ import Routes from '~/routes';
 const App = () => (
   <Provider store={store}>
     <NavigationContainer>
+      <StatusBar
+        backgroundColor="#343434"
+      />
       <Routes />
     </NavigationContainer>
   </Provider>
