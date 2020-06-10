@@ -2,8 +2,9 @@ import React from 'react';
 
 import FilmCard from '../FilmCard';
 
+import { basePosterUrl } from '~/services/image';
 
-import { List, L } from './styles';
+import { List } from './styles';
 
 export default function FilmList() {
   return (
@@ -12,16 +13,58 @@ export default function FilmList() {
       showsHorizontalScrollIndicator={false}
     >
       <FilmCard
-        uri={'https://picsum.photos/200/300'}
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
       />
       <FilmCard
-        uri={'https://picsum.photos/200/300'}
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
       />
       <FilmCard
-        uri={'https://picsum.photos/200/300'}
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
       />
       <FilmCard
-        uri={'https://picsum.photos/200/300'}
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
+      />
+      <FilmCard
+        uri={`${basePosterUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg`}
       />
     </List>
   )

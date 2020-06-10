@@ -3,6 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Buttons from '~/components/HeaderButtons';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 import { Button } from 'react-native';
 
 import Films from '../pages/Films';
@@ -31,6 +33,8 @@ export default function AuthNavigator() {
           headerTitleStyle: {
             color: '#FFFFFF'
           },
+          animationEnabled: true,
+          headerBackground: () => <LinearGradient colors={['#343434', 'rgba(0, 0, 0, 0)']} style={{ flex: 1 }} />,
           headerRight: () => <Buttons />
         }}
       />

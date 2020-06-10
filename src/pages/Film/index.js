@@ -1,13 +1,15 @@
 import React from 'react';
 
+import { baseBackdropUrl } from '~/services/image';
+
 import { Image, Title, Year, Description, Gradient, Icon } from './styles';
 
 export default function Film() {
   return (
     <Image
-      source={{ uri: 'https://abrilveja.files.wordpress.com/2019/07/blogib_o-rei-leao-2019_feat.jpg?quality=70&strip=info&w=1024' }}
+      source={{ uri: `${baseBackdropUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg` }}
     >
-      <Gradient colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 1)']}>
+      <Gradient colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.7)']}>
         <Icon
           name="play"
           size={100}

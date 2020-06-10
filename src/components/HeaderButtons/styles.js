@@ -6,3 +6,4 @@ export const Buttons = styled.View`
   width: 80px;
   margin-right: 15px;
 `;
+
