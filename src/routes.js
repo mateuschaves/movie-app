@@ -1,6 +1,6 @@
 import { RootAuthenticated, RootNotAuthenticated } from './navigations';
 
-const logged = true;
+const logged = false;
 let Routes;
 
 if (logged)

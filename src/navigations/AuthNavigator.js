@@ -9,7 +9,13 @@ export default function AuthNavigator() {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Auth" component={Auth} />
+      <Stack.Screen
+        name="Auth"
+        component={Auth}
+        options={{
+          headerShown: false
+        }}
+      />
     </Stack.Navigator>
   );
 }

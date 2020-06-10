@@ -28,7 +28,13 @@ export function RootNotAuthenticated() {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Auth" component={AuthNavigator} />
+      <Stack.Screen
+        name="Auth"
+        options={{
+          headerShown: false
+        }}
+        component={AuthNavigator}
+      />
     </Stack.Navigator>
   );
 }
