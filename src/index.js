@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
 import '~/config/ReactotronConfig';
 
@@ -9,7 +10,9 @@ import Routes from '~/routes';
 
 const App = () => (
   <Provider store={store}>
-    <Routes />
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   </Provider>
 );
 

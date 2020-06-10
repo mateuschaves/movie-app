@@ -1,7 +1,11 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { RootAuthenticated, RootNotAuthenticated } from './navigations';
 
-import Main from '~/pages/Main';
+const logged = true;
+let Routes;
 
-const Routes = createAppContainer(createSwitchNavigator({ Main }));
+if (logged)
+  Routes = RootAuthenticated;
+else
+  Routes = RootNotAuthenticated;
 
 export default Routes;
