@@ -3,11 +3,13 @@ import React from 'react';
 
 import FilmList from '~/components/FilmList';
 
-import { Container, Header, HeaderTitle, Avatar, Category } from './styles';
+import { Container, Header, HeaderTitle, Avatar, Title, FilmsCategory } from './styles';
 
 export default function Films() {
   return (
-    <Container>
+    <Container
+      showsVerticalScrollIndicator={false}
+    >
       <Header>
         <HeaderTitle>
           Escolha um {'\n'}título
@@ -18,17 +20,21 @@ export default function Films() {
         />
       </Header>
 
-      <Category>
-        Drama
-      </Category>
+      <FilmsCategory>
+        <Title>
+          Drama
+        </Title>
 
-      <FilmList />
+        <FilmList />
+      </FilmsCategory>
 
-      <Category>
-        Suspense
-      </Category>
+      <FilmsCategory>
+        <Title>
+          Suspense
+        </Title>
 
-      <FilmList />
+        <FilmList />
+      </FilmsCategory>
 
     </Container>
   )
