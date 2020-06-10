@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 export default function Film() {
   return (
-    <View>
+    <View style={{ flex: 1, backgroundColor: 'black' }}>
       <Text>Film</Text>
     </View>
   )
