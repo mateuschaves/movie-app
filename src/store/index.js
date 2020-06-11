@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
+  whitelist: ['FavoriteFilms']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

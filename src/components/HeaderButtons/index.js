@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -8,6 +8,7 @@ export default function HeaderButtons() {
 
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
+
 
   return (
     <Buttons>

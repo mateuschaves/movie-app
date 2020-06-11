@@ -15,7 +15,7 @@ export default function Films() {
 
   const dispatch = useDispatch();
 
-  const { ActionGenre, AdventureGenre, SuspenseGenre, AnimationGenre } = useSelector(state => state);
+  const { ActionGenre, AdventureGenre, SuspenseGenre, AnimationGenre, FavoriteFilms } = useSelector(state => state);
 
   useEffect(() => {
 
