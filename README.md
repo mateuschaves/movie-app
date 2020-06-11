@@ -1,5 +1,5 @@
 #  Movie App Teste Técnico
-👌 Front end do teste prático para a vaga de Desenvolvedor Backend NodeJS Pleno
+Aplicativo para teste técnico na empresa Taki Brasil.
 
 # Instalação
 
