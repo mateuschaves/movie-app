@@ -21,7 +21,7 @@ $ npm install
 :white_check_mark: Redux\
 :white_check_mark: Redux Saga\
 :white_check_mark: Duck Patterns\
-:white_check_mark: React Hooks\
+:white_check_mark: React Hooks
 
 ## Executando a aplicação
 
