@@ -1,6 +1,13 @@
 #  Movie App Teste Técnico
 :iphone: Aplicativo para teste técnico na empresa Taki Brasil.
 
+<p float="left">
+  <img src="https://i.imgur.com/fAkb4Ax.png" width="250" height="500"/>
+  <img src="https://i.imgur.com/RqTEntj.png" width="250" height="500"/>
+  <img src="https://i.imgur.com/Z829JYR.png" width="250" height="500" />
+  <img src="https://i.imgur.com/zFb8c2E.png" width="250" height="500" />
+</p>
+
 # Instalação
 
 ```bash
