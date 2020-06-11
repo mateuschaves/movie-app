@@ -5,6 +5,7 @@ import FilmList from '~/components/FilmList';
 import { Types as AdventureGenreTypes } from "~/store/ducks/AdventureGenre";
 import { Types as ActionGenreTypes } from "~/store/ducks/ActionGenre";
 import { Types as SuspenseGenreTypes } from "~/store/ducks/SuspenseGenre";
+import { Types as AnimationGenreTypes } from "~/store/ducks/AnimationGenre";
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -14,7 +15,7 @@ export default function Films() {
 
   const dispatch = useDispatch();
 
-  const { ActionGenre, AdventureGenre, SuspenseGenre } = useSelector(state => state);
+  const { ActionGenre, AdventureGenre, SuspenseGenre, AnimationGenre } = useSelector(state => state);
 
   useEffect(() => {
 
@@ -31,7 +32,12 @@ export default function Films() {
     dispatch({
       type: SuspenseGenreTypes.GET_SUSPENSE_REQUEST,
       payload: {}
-    })
+    });
+
+    dispatch({
+      type: AnimationGenreTypes.GET_ANIMATION_REQUEST,
+      payload: {}
+    });
 
   }, []);
   return (
@@ -78,6 +84,19 @@ export default function Films() {
           films={SuspenseGenre?.films}
         />
       </FilmsCategory>
+
+      <FilmsCategory>
+        <Title>
+          Animação
+        </Title>
+
+        <FilmList
+          films={AnimationGenre?.films}
+        />
+      </FilmsCategory>
+
+
+
 
     </Container>
   )
