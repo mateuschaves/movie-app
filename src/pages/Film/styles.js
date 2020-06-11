@@ -44,3 +44,10 @@ export const Icon = styled(MaterialCommunityIcons)`
   color: #8D0000;
   margin-bottom: 60px;
 `;
+
+export const MoreText = styled.Text`
+   color: #FFFFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+`;

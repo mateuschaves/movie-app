@@ -1,13 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { baseBackdropUrl } from '~/services/image';
 
-import { Image, Title, Year, Description, Gradient, Icon } from './styles';
+import ViewMoreText from 'react-native-view-more-text';
+
+import { Image, Title, Year, Description, Gradient, Icon, MoreText } from './styles';
 
 export default function Film({ route }) {
   const params = route.params;
 
   const { film } = params;
+
+  function renderViewMore(onPress) {
+    return (
+      <MoreText onPress={onPress}>Ver mais</MoreText>
+    )
+  }
+  function renderViewLess(onPress) {
+    return (
+      <MoreText onPress={onPress}>Ver menos</MoreText>
+    )
+  }
 
   return (
     <Image
@@ -24,9 +37,16 @@ export default function Film({ route }) {
         <Year>
           {new Date(film?.release_date).getFullYear()}
         </Year>
-        <Description>
-          {film.overview}
-        </Description>
+        <ViewMoreText
+          numberOfLines={3}
+          renderViewMore={renderViewMore}
+          renderViewLess={renderViewLess}
+          textStyle={{ textAlign: 'left' }}
+        >
+          <Description>
+            {film.overview}
+          </Description>
+        </ViewMoreText>
       </Gradient>
     </Image>
   )
