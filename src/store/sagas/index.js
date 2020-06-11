@@ -1,5 +1,9 @@
-import { all } from 'redux-saga/effects';
+import { all, takeLatest } from 'redux-saga/effects';
+import { Types as FilmsTypes } from '~/store/ducks/films';
+import { getActionsFilms } from './films'
 
 export default function* rootSaga() {
-  yield all([]);
+  yield all([
+    takeLatest(FilmsTypes.GET_ACTION_REQUEST, getActionsFilms)
+  ]);
 }

@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
+import films from './films';
+
 const reducers = combineReducers({
-  // Remova essa linha depois de adicionar seus ducks
-  example: () => [],
+  films
 });
 
 export default reducers;
