@@ -12,15 +12,18 @@ export default function Films() {
 
   const dispatch = useDispatch();
 
-  const { action } = useSelector(state => state.films);
-
-  console.tron.log(action);
+  const { action, adventure } = useSelector(state => state.films);
 
   useEffect(() => {
 
     dispatch({
       type: Types.GET_ACTION_REQUEST,
-      payload: 'teste'
+      payload: {}
+    });
+
+    dispatch({
+      type: Types.GET_ADVENTURE_REQUEST,
+      payload: {}
     });
 
   }, []);
@@ -53,7 +56,9 @@ export default function Films() {
           Suspense
         </Title>
 
-        <FilmList />
+        <FilmList
+          films={adventure.films}
+        />
       </FilmsCategory>
 
     </Container>
