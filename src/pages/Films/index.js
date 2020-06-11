@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import FilmList from '~/components/FilmList';
+import Header from '~/components/Header';
 
 import { Types as AdventureGenreTypes } from "~/store/ducks/AdventureGenre";
 import { Types as ActionGenreTypes } from "~/store/ducks/ActionGenre";
@@ -9,13 +10,13 @@ import { Types as AnimationGenreTypes } from "~/store/ducks/AnimationGenre";
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Container, Header, HeaderTitle, Avatar, Title, FilmsCategory } from './styles';
+import { Container, Title, FilmsCategory } from './styles';
 
 export default function Films() {
 
   const dispatch = useDispatch();
 
-  const { ActionGenre, AdventureGenre, SuspenseGenre, AnimationGenre, FavoriteFilms } = useSelector(state => state);
+  const { ActionGenre, AdventureGenre, SuspenseGenre, AnimationGenre } = useSelector(state => state);
 
   useEffect(() => {
 
@@ -44,15 +45,9 @@ export default function Films() {
     <Container
       showsVerticalScrollIndicator={false}
     >
-      <Header>
-        <HeaderTitle>
-          Escolha um {'\n'}título
-        </HeaderTitle>
-
-        <Avatar
-          source={{ uri: 'https://api.adorable.io/avatars/50/abott@adorable.png' }}
-        />
-      </Header>
+      <Header
+        title={`Escolha um \ntítulo`}
+      />
 
       <FilmsCategory>
         <Title>

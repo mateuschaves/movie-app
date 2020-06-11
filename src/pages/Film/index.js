@@ -37,15 +37,11 @@ export default function Film() {
 
   return (
     <Image
-      source={{ uri: `${baseBackdropUrl}${film.backdrop_path}` }}
+      source={{ uri: `${baseBackdropUrl}${film?.backdrop_path}` }}
     >
       <Gradient colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.7)']}>
-        <Icon
-          name="play"
-          size={100}
-        />
         <Title>
-          {film.title}
+          {film?.title || ''}
         </Title>
         <Year>
           {new Date(film?.release_date).getFullYear()}
@@ -57,7 +53,7 @@ export default function Film() {
           textStyle={{ textAlign: 'left' }}
         >
           <Description>
-            {film.overview}
+            {film?.overview || ''}
           </Description>
         </ViewMoreText>
       </Gradient>
