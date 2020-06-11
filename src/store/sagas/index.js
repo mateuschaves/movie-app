@@ -1,10 +1,11 @@
 import { all, takeLatest } from 'redux-saga/effects';
-import { Types as FilmsTypes } from '~/store/ducks/films';
+import { Types as AdventureGenreTypes } from '~/store/ducks/AdventureGenre';
+import { Types as ActionGenreTypes } from '~/store/ducks/ActionGenre';
 import { getActionsFilms, getAdventureFilms } from './films'
 
 export default function* rootSaga() {
   yield all([
-    takeLatest(FilmsTypes.GET_ACTION_REQUEST, getActionsFilms),
-    takeLatest(FilmsTypes.GET_ADVENTURE_REQUEST, getAdventureFilms)
+    takeLatest(ActionGenreTypes.GET_ACTION_REQUEST, getActionsFilms),
+    takeLatest(AdventureGenreTypes.GET_ADVENTURE_REQUEST, getAdventureFilms)
   ]);
 }

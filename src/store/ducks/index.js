@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import films from './films';
+import ActionGenre from './ActionGenre';
+import AdventureGenre from './AdventureGenre';
 
 const reducers = combineReducers({
-  films
+  AdventureGenre,
+  ActionGenre,
 });
 
 export default reducers;

@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 
 import FilmList from '~/components/FilmList';
 
-import { Types } from "~/store/ducks/films";
+import { Types as AdventureGenreTypes } from "~/store/ducks/AdventureGenre";
+import { Types as ActionGenreTypes } from "~/store/ducks/ActionGenre";
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -12,17 +13,17 @@ export default function Films() {
 
   const dispatch = useDispatch();
 
-  const { action, adventure } = useSelector(state => state.films);
+  const { ActionGenre, AdventureGenre } = useSelector(state => state);
 
   useEffect(() => {
 
     dispatch({
-      type: Types.GET_ACTION_REQUEST,
+      type: ActionGenreTypes.GET_ACTION_REQUEST,
       payload: {}
     });
 
     dispatch({
-      type: Types.GET_ADVENTURE_REQUEST,
+      type: AdventureGenreTypes.GET_ADVENTURE_REQUEST,
       payload: {}
     });
 
@@ -47,7 +48,7 @@ export default function Films() {
         </Title>
 
         <FilmList
-          films={action.films}
+          films={ActionGenre?.films}
         />
       </FilmsCategory>
 
@@ -57,7 +58,7 @@ export default function Films() {
         </Title>
 
         <FilmList
-          films={adventure.films}
+          films={AdventureGenre?.films}
         />
       </FilmsCategory>
 
