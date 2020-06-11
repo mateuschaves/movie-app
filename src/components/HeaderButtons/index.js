@@ -12,10 +12,18 @@ export default function HeaderButtons() {
 
   const dispatch = useDispatch();
   const { film } = useSelector(state => state.FilmDetail);
+  const { films = [] } = useSelector(state => state.FavoriteFilms);
 
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(isFilmAlreadyLiked());
   const [disliked, setDisliked] = useState(false);
 
+  function isFilmAlreadyLiked() {
+    const found = films?.find(item => item.id == film.id);
+    if (found)
+      return true;
+    else
+      return false;
+  }
 
   return (
     <Buttons>
