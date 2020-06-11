@@ -1,26 +1,18 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import rootReducer from '~/store/ducks';
+import AsyncStorage from '@react-native-community/async-storage';
 
-import reducers from './ducks';
-import sagas from './sagas';
 
-const middlewares = [];
+const persistConfig = {
+  key: 'root',
+  storage: AsyncStorage,
+};
 
-const sagaMonitor = __DEV__ ? console.tron.createSagaMonitor() : null;
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const sagaMiddleware = createSagaMiddleware();
+let store = createStore(persistedReducer, applyMiddleware(sagaMiddleware));
+let persistor = persistStore(store);
 
-const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
-
-middlewares.push(sagaMiddleware);
-
-const composer = __DEV__
-  ? compose(
-    applyMiddleware(...middlewares),
-    console.tron.createEnhancer(),
-  )
-  : compose(applyMiddleware(...middlewares));
-
-const store = createStore(reducers, composer);
-
-sagaMiddleware.run(sagas);
-
-export default store;
+export { store, persistor, sagaMiddleware };
