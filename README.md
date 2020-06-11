@@ -1,5 +1,5 @@
 #  Movie App Teste Técnico
-Aplicativo para teste técnico na empresa Taki Brasil.
+:iphone: Aplicativo para teste técnico na empresa Taki Brasil.
 
 # Instalação
 
