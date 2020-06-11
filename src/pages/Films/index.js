@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 
-import api from '~/services/api';
-
 import FilmList from '~/components/FilmList';
 
 import { Types } from "~/store/ducks/films";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Container, Header, HeaderTitle, Avatar, Title, FilmsCategory } from './styles';
 
@@ -14,10 +12,11 @@ export default function Films() {
 
   const dispatch = useDispatch();
 
+  const { action } = useSelector(state => state.films);
+
+  console.tron.log(action);
+
   useEffect(() => {
-    // api.get('movie/popular?api_key=c2d9f7b4820307867e946fc0ac1d1255&language=en-US')
-    //   .then(({ data }) => console.log(data))
-    //   .catch(error => console.log(error));
 
     dispatch({
       type: Types.GET_ACTION_REQUEST,
@@ -41,10 +40,12 @@ export default function Films() {
 
       <FilmsCategory>
         <Title>
-          Drama
+          Ação
         </Title>
 
-        <FilmList />
+        <FilmList
+          films={action.films}
+        />
       </FilmsCategory>
 
       <FilmsCategory>

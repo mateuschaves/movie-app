@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { baseBackdropUrl } from '~/services/image';
 
 import { Image, Title, Year, Description, Gradient, Icon } from './styles';
 
-export default function Film() {
+export default function Film({ route }) {
+  const params = route.params;
+
+  const { film } = params;
+
   return (
     <Image
-      source={{ uri: `${baseBackdropUrl}f496cm9enuEsZkSPzCwnTESEK5s.jpg` }}
+      source={{ uri: `${baseBackdropUrl}${film.backdrop_path}` }}
     >
       <Gradient colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.7)']}>
         <Icon
@@ -15,14 +19,14 @@ export default function Film() {
           size={100}
         />
         <Title>
-          Rei Leão
-       </Title>
+          {film.title}
+        </Title>
         <Year>
-          2019
-       </Year>
+          {new Date(film?.release_date).getFullYear()}
+        </Year>
         <Description>
-          Em O Rei Leão, Simba (Donald Glover) é um jovem leão cujo destino é se tornar o rei da selva. Entretanto, uma armadilha.
-       </Description>
+          {film.overview}
+        </Description>
       </Gradient>
     </Image>
   )
