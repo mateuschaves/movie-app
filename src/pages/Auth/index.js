@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
 
-import LoginButton from '~/components/LoginButton';
+import { useNavigation } from '@react-navigation/native';
 
-import { Container, Title, Input, Form } from './styles';
+import { Types as AuthTypes } from '~/store/ducks/Auth';
+
+import { useDispatch } from 'react-redux';
+
+import { Container, Title, Input, Form, Button, Label } from './styles';
 
 export default function Auth() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigation = useNavigation();
+  const dispatch = useDispatch();
+
+
+  function handleLogin() {
+    dispatch({
+      type: AuthTypes.SET_LOGIN,
+      payload: {}
+    });
+
+    navigation.navigate('Films')
+  }
 
   return (
     <Container>
@@ -34,8 +51,11 @@ export default function Auth() {
           onChangeText={setPassword}
         />
 
-        <LoginButton
-        />
+        <Button
+          onPress={handleLogin}
+        >
+          <Label>START</Label>
+        </Button>
       </Form>
 
     </Container>

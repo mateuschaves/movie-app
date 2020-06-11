@@ -1,11 +1,16 @@
+import React from 'react';
 import { RootAuthenticated, RootNotAuthenticated } from './navigations';
 
-const logged = true;
-let Routes;
+import { useSelector } from 'react-redux';
 
-if (logged)
-  Routes = RootAuthenticated;
-else
-  Routes = RootNotAuthenticated;
+export default function Routes() {
 
-export default Routes;
+  const { alreadyAuthenticated } = useSelector(state => state.Auth);
+  return (
+    <>
+      {
+        alreadyAuthenticated ? <RootAuthenticated /> : <RootNotAuthenticated />
+      }
+    </>
+  );
+}

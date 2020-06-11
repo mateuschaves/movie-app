@@ -6,6 +6,7 @@ import SuspenseGenre from './SuspenseGenre';
 import AnimationGenre from './AnimationGenre';
 import FavoriteFilms from './FavoriteFilms';
 import FilmDetail from './FilmDetail';
+import Auth from './Auth';
 
 const reducers = combineReducers({
   FavoriteFilms,
@@ -13,7 +14,8 @@ const reducers = combineReducers({
   ActionGenre,
   SuspenseGenre,
   AnimationGenre,
-  FilmDetail
+  FilmDetail,
+  Auth
 });
 
 export default reducers;
